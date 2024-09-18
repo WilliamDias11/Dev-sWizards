@@ -1,0 +1,314 @@
+/**************** FORMATAÇAO GLOBAL *********************/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(0, 0, 0);
+    
+}
+
+.line {
+    height: 5px; 
+    width: 50%;
+}
+
+.half-pink {
+    background-color: rgb(187, 22, 202);
+}
+
+.half-green {
+    background-color: rgb(14, 196, 14);
+}
+.line-container {
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+/**************** FONTES *********************/
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+
+.jockey-one-regular {
+    font-family: "Jockey One", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+/**************** FORMATAÇAO NAVEGAÇÃO *********************/
+
+header {
+    background-color: black;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    
+}
+
+.logo {
+    margin-left: 40px;
+    padding-top: 20px;
+}
+
+nav {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+    color: antiquewhite;
+   
+}
+
+#menu a{
+    font-size: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s ease;
+    margin-right: 40px;
+    border-bottom: 3px solid transparent;
+   
+}
+
+
+#menu a:hover {
+    color: #00ff37;
+    border-bottom: 3px solid
+}
+
+#btn-mobile {
+    display: none;
+}
+@media (max-width: 900px) {
+    #btn-mobile {
+        display: block;
+        background-color: #000000; 
+        border: none; 
+        cursor: pointer; 
+         
+    }
+
+    .menumob {
+        width: 40px;
+        margin-right: 20px;
+    }
+     #menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 80px;
+        padding: 4px;
+        right: 0px;
+        background: #000000;
+        height: 0px;
+        transition: .6s;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+        border-top: 2px solid #EBCE4D;
+        border-bottom: 2px solid #EBCE4D;
+        
+    }
+
+    #nav.active #menu {
+        visibility: visible;
+        height: calc(24vh - 20px);
+        overflow-y: auto;
+    }
+
+    
+    #menu a {
+        
+        padding: 1px ;
+        margin: 0 1rem;
+        
+    }
+
+  
+    
+  
+}
+
+/**************** BANNER *********************/
+.banner {
+    width: 100%;
+}
+
+
+/**************** SECTION ESPECIALIDADES *********************/
+#especialidades {
+    margin-top: 40PX;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#especialidades p, h1 {
+    color: #ffffff;
+   
+}
+
+.img-esquerda {
+    float: left;
+    margin-left: 50px;
+}
+
+.img-direita {
+    float: right;
+    margin-right: 50px;
+}
+
+.text {
+   
+    width: 1200px;
+    
+    
+    text-align: center;
+    margin-top: 80px;
+}
+
+
+
+/*PROJETOS*/
+.h2Projeto {
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+    font-size: 32px;
+ }
+ 
+ section.projetos{
+    padding:  10px 7%;
+    
+ }
+ 
+ section.projetos .flex{
+    justify-content: space-around;
+    display: flex;
+ }
+ 
+ .img-port {
+    border: 2px solid rgb(255, 255, 255);
+    
+    width: 360px;
+    height: 450px;
+    cursor: pointer;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 3s;
+    position: relative;
+ }
+ 
+ .img-port:hover{
+    background-position: 100% 100%;
+ }
+ 
+ .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0000007a;
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    opacity: 0;
+    transition: 0.5s;
+ }
+ 
+ .overlay:hover {
+    opacity: 1;
+ }
+
+
+
+
+
+/*FORMULARIO*/
+
+section.formulario{
+    padding: 80px 4%;
+ }
+
+.form-box h2{
+    text-align: center;
+    color: white;
+}
+ 
+ form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+ }
+ 
+ form input, form textarea {
+    width: 100%;
+    background-color: #645c5c4d;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    color: white;
+    font-size: 18px;
+ }
+ 
+ 
+ form .btn-enviar {
+    margin-top: 20px;
+    text-align: center;
+    padding-bottom: 40px;
+ }
+ 
+ form .btn-enviar input{
+    width: 180px;
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer;
+    border: 4px solid #09ff00;
+    border-radius: 20px;
+    transition: .2s;
+ }
+ 
+ form .btn-enviar input:hover {
+    transform: scale(1.05);
+ }
+
+
+ /*FOOTER*/
+
+ footer {
+    padding-right: 80px;
+    display: flex;
+    color: white;
+    justify-content: space-around;
+    margin-bottom: 20px;
+ }
+
+ .logo-footer {
+   
+ }
+
+ .icones a {
+    display: inline;
+    padding: 4px;
+    
+    
+ }
+
+ .icones a:link{
+   color: #e20000;
+ }
